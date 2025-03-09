@@ -80,6 +80,7 @@ for (int i = 0; i < vec.size(); i++) {
 
 7. Pointers & references
 Pointer (Memory addresses)
+# Update value of a variable with & and * operator
 ```cpp
 #include <iostream>
 using namespace std;
@@ -120,4 +121,31 @@ C++ has three access modifiers
 public: access out side of class
 protected: access inside of the class and sub class (inherited class)
 private: inside class
+
+
+9. Inheritance (OOP concept)
+Inheritance allows one class to derive properties from another
+```cpp
+#include <iostream>
+using namespace std;
+class Vehicle {
+    public:
+        void honk() {
+            cout << "Beep Beep!" << endl;
+        }
+};
+
+class Car : public Vehicle {
+    public:
+        void drive() {
+            cout << "Driving..." << endl;
+        }
+};
+
+int main() {
+    Car myCar;
+    myCar.honk();
+    myCar.drive();
+}
+```
 
