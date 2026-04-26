@@ -60,7 +60,7 @@ int main() {
 ```
 
 6. Arrays & Vector
-
+Arrays (Fixed size)
 ```cpp
 // Arrays (Fixed size)
 int arr[5] = {1, 2, 3, 4, 5};
@@ -77,10 +77,63 @@ for (int i = 0; i < vec.size(); i++) {
 }
 
 ```
+6.1 Pair
+A simple container holding 2 values (can be different types).
+```cpp
+pair<int, string> p;
+
+p = {1, "hello"};
+cout << p.first << " " << p.second;
+
+```
+
+
+6.2 Stack
+LIFO (Last In, First Out)
+DFS, undo operations, parsing expressions
+```cpp
+#include <stack>
+stack<int> st;
+st.push(1);
+st.push(2);
+st.push(3);
+
+cout << st.top(); // 3
+
+st.pop(); // remove top
+```
+
+6.3 Queue
+FIFO (First In, First Out) — like a line of people.
+Use for: BFS, scheduling, buffering
+```cpp
+#include <queue>
+queue<int> q;
+q.push(1);
+q.push(2);
+q.push(3);
+cout << q.front(); // 1
+
+q.pop(); // remove front
+```
+
+6.4 Priority_queue
+```cpp
+#include <queue>
+priority_queue<int> pq;
+pq.push(5);
+pq.push(1);
+pq.push(10);
+
+cout << pq.top(); // 10
+```
+
 
 7. Pointers & references
 Pointer (Memory addresses)
 # Update value of a variable with & and * operator
+
+
 ```cpp
 #include <iostream>
 using namespace std;
